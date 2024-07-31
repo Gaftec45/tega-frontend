@@ -1,0 +1,63 @@
+/* General styles for support platform */
+.support-platform {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.platform-card {
+    background-color: #a3cffe;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1 1 calc(20% - 1rem); /* Five cards per row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.platform-card:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+.platform-card p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .platform-card {
+        flex: 1 1 calc(25% - 1rem); /* Four cards per row */
+    }
+}
+
+@media (max-width: 1024px) {
+    .platform-card {
+        flex: 1 1 calc(33.333% - 1rem); /* Three cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .platform-card {
+        flex: 1 1 calc(50% - 1rem); /* Two cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .support-platform {
+        padding: 1rem;
+    }
+
+    .platform-card {
+        padding: 0.75rem;
+    }
+
+    .platform-card p {
+        font-size: 1rem;
+    }
+}

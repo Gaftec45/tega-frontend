@@ -1,0 +1,54 @@
+/* Container for portfolio items */
+.work {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+/* Portfolio item styling */
+.ourwork-item {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.ourwork-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Text styling */
+.ourwork-item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.ourwork-item:hover p {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Image styling */
+.ourwork-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
