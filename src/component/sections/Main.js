@@ -1,9 +1,6 @@
-// import Banner1 from '../images/banner-1.jpg'
 import './Main.css'
-// import OurWork from './Ourwork';
 
 const Main = () => {
-    
     return (
         <div id='main-section'>
             <div className="main-content">

@@ -23,8 +23,18 @@ const Footer = () => {
                 <div className="footer-section">
                     <h3>Follow Us</h3>
                     <div className="social-icons">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                        <a href="https://facebook.com" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Follow us on Facebook">
+                            <FaFacebook /> <span className="sr-only">Facebook</span>
+                        </a>
+                        <a href="https://instagram.com" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Follow us on Instagram">
+                            <FaInstagram /> <span className="sr-only">Instagram</span>
+                        </a>
                     </div>
                 </div>
             </div>
