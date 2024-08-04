@@ -1,57 +1,75 @@
+import React, { useEffect, useRef } from 'react';
 import './ReviewSection.css'; // Make sure to create this CSS file
 
 const ReviewSection = () => {
+    const reviews = [
+        {
+            id: 1,
+            name: 'John Doe',
+            feedback: 'TegaFate has been instrumental in growing my business. Their innovative approach and commitment to excellence are unmatched.',
+            rating: 5,
+        },
+        {
+            id: 2,
+            name: 'Jane Smith',
+            feedback: 'Working with TegaFate has been a game-changer for our company. Their expertise in technology and business strategy is top-notch.',
+            rating: 4,
+        },
+        {
+            id: 3,
+            name: 'Michael Johnson',
+            feedback: 'TegaFate’s team is dedicated and professional. They’ve helped us achieve our goals efficiently.',
+            rating: 5,
+        },
+        {
+            id: 4,
+            name: "Lynarose Official",
+            feedback: "The professionalism and dedication of the TegaFate team are unmatched. They’ve consistently gone above and beyond to help us achieve our business goals. We are extremely pleased with their work.",
+            rating: 5,
+        },
+        {
+            id: 5,
+            name: "Bask's Jewelry",
+            feedback: "The team at TegaFate has exceeded our expectations. Their visionary leadership and dedication have made a real difference for our company.",
+            rating: 5,
+        },
+        { id: 6, 
+          name: "Luxurydainty Brand",
+          feedback: "We couldn't be happier with the results we've seen since partnering with TegaFate. Their attention to detail and passion for innovation is evident in everything they do.",
+          rating: 5,
+        },
+   
+        // Add more reviews as needed
+    ];
+
+    const reviewRef = useRef(null);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (reviewRef.current) {
+                reviewRef.current.scrollBy({ left: reviewRef.current.clientWidth, behavior: 'smooth' });
+                if (reviewRef.current.scrollLeft + reviewRef.current.clientWidth >= reviewRef.current.scrollWidth) {
+                    reviewRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+                }
+            }
+        }, 6000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <div id="review-section">
-            <span className="heading">User Rating</span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star"></span>
-            <p>4.1 average based on 254 reviews.</p>
-            <hr style={{ border: "3px solid #f1f1f1" }} />
-
-            <div className="row">
-                <div className="side"><div>5 star</div></div>
-                <div className="middle">
-                    <div className="bar-container">
-                        <div className="bar-5"></div>
+        <div className="review-section">
+            <h2>Feedback From Our Satisfied Clients</h2>
+            <div className="review-list" ref={reviewRef}>
+                {reviews.map(review => (
+                    <div key={review.id} className="review-item">
+                        <h3>{review.name}</h3>
+                        <p>{review.feedback}</p>
+                        <div className="rating">
+                            {'⭐'.repeat(review.rating)}
+                        </div>
                     </div>
-                </div>
-                <div className="side right"><div>150</div></div>
-
-                <div className="side"><div>4 star</div></div>
-                <div className="middle">
-                    <div className="bar-container">
-                        <div className="bar-4"></div>
-                    </div>
-                </div>
-                <div className="side right"><div>63</div></div>
-
-                <div className="side"><div>3 star</div></div>
-                <div className="middle">
-                    <div className="bar-container">
-                        <div className="bar-3"></div>
-                    </div>
-                </div>
-                <div className="side right"><div>15</div></div>
-
-                <div className="side"><div>2 star</div></div>
-                <div className="middle">
-                    <div className="bar-container">
-                        <div className="bar-2"></div>
-                    </div>
-                </div>
-                <div className="side right"><div>6</div></div>
-
-                <div className="side"><div>1 star</div></div>
-                <div className="middle">
-                    <div className="bar-container">
-                        <div className="bar-1"></div>
-                    </div>
-                </div>
-                <div className="side right"><div>20</div></div>
+                ))}
             </div>
         </div>
     );

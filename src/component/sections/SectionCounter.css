@@ -1,0 +1,29 @@
+.section-counter {
+    text-align: center;
+    padding: 20px;
+}
+
+.metrics-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.metric {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 150px;
+}
+
+.metric h3 {
+    font-size: 2em;
+    margin: 0;
+    color: #000;
+}
+ 
+.metric p {
+    font-size: 1em;
+    margin: 5px 0 0 0;
+}

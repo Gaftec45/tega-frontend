@@ -5,8 +5,7 @@ const ServiceSection = () => {
     return (
         <div id="service-section">
             <div className="wrapper">
-                <div className='idex'></div>
-                <h2>Our Services</h2>
+                <h2>Services We Offer</h2>
                 <div className="services">
                     <div className="service-card">
                         <i className="fas fa-search"></i>

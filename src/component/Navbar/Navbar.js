@@ -7,14 +7,14 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     }
-
     return (
         <nav className="navbar">
-            <div className="navbar-brand">Latheef</div>
+            <div className="navbar-brand"><a href="/">TEGAFATE</a></div>
             <ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#solution">Solution</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div className="navbar-toggle" id="mobile-menu" onClick={toggleMenu}>
