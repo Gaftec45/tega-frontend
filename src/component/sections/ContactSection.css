@@ -13,7 +13,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-    background-color: #765fce;
+    background-color: #f0a500;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -22,7 +22,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: #fff;
-    color: #765fce;
+    color: #f0a500;
 }
 
 /* Style the container/contact section */

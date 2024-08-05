@@ -9,7 +9,7 @@
 }
 
 .platform-card {
-    background-color: #503d9b;
+    background-color: #f0a500;
     color: white;
     padding: 1rem;
     border-radius: 5px;
@@ -20,7 +20,7 @@
 }
 
 .platform-card:hover {
-    background-color: #c5b7ff;
+    background-color: #f6c968;
     transform: translateY(-5px);
 }
 
