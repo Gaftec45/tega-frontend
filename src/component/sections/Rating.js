@@ -17,7 +17,7 @@ const ReviewSection = () => {
         },
         {
             id: 3,
-            name: 'Michael Johnson',
+            name: 'Newlife Auri Store',
             feedback: 'TegaFate’s team is dedicated and professional. They’ve helped us achieve our goals efficiently.',
             rating: 5,
         },
