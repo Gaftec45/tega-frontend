@@ -5,13 +5,13 @@ const ReviewSection = () => {
     const reviews = [
         {
             id: 1,
-            name: 'John Doe',
+            name: 'Jelly Jewels MTL',
             feedback: 'TegaFate has been instrumental in growing my business. Their innovative approach and commitment to excellence are unmatched.',
             rating: 5,
         },
         {
             id: 2,
-            name: 'Jane Smith',
+            name: 'RMB Style Store',
             feedback: 'Working with TegaFate has been a game-changer for our company. Their expertise in technology and business strategy is top-notch.',
             rating: 4,
         },
