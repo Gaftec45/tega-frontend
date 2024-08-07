@@ -8,13 +8,13 @@ const SupportPlatform = () => {
                 <p>Shopify</p>
             </div>
             <div className="platform-card">
-                <p>WordPress</p>
+                <p>Amazon</p>
             </div>
             <div className="platform-card">
                 <p>Woocommerce</p>
             </div>
             <div className="platform-card">
-                <p>Wix</p>
+                <p>Etsy</p>
             </div>
         </div>
     );
