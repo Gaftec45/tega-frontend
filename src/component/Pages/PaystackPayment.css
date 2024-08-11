@@ -1,0 +1,77 @@
+/* PaystackPayment.css */
+
+.checkout-container {
+    font-family: 'Arial', sans-serif;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    margin: 130px auto;
+  }
+
+  .amount-display {
+    padding: 12px;
+    border: 1px solid #ddd;
+    /* border-radius: 4px; */
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #42337e;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .pay-button {
+    background-color: #f0a500;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .pay-button:hover {
+    background-color: #e09d00;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 600px) {
+    .checkout-container {
+      padding: 20px;
+    }
+  }
+  

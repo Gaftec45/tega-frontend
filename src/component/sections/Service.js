@@ -39,9 +39,9 @@ const ServiceSection = () => {
                         <i className="fas fa-chart-pie"></i>
                         <h3>Conversion Rate Optimization (CRO)</h3>
                     </div>
-                    <div className="service-card">
+                    <div className="service-card"><a href="/service">
                         <i className="fas fa-laptop-code"></i>
-                        <h3>Already Made Store</h3>
+                        <h3>Already Made Store</h3></a>
                     </div>
                 </div>
             </div>

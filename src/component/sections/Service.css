@@ -43,6 +43,16 @@ h2 {
     z-index: 2; /* Base z-index for normal stacking */
 }
 
+.service-card a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
 .service-card i {
     font-size: 4rem;
     color: #f0a500;
