@@ -11,6 +11,10 @@ const PAYSTACK_PUBLIC_KEY = process.env.PAYSTACK_PUBLIC_KEY;
 app.use(bodyParser.json());
 app.use(cors({ origin: 'http://localhost:3000' }));
 
+app.get('/', (req, res) => {
+    res.send('welcome to home page');
+});
+
 app.post('/create-paystack-transaction', (req, res) => {
   const { email, amount } = req.body;
 
