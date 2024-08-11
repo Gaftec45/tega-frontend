@@ -12,7 +12,7 @@ const PaystackPayment = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/create-paystack-transaction', {
+      const response = await fetch('https://server-side-for-tega.onrender.com/create-paystack-transaction', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
