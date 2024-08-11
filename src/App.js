@@ -13,8 +13,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} /> 
-          <Route path="/service" element={<ServicePage />} />
-          <Route path="/payment" element={<PaystackPayment />} />
+          <Route path="/service" Component={<ServicePage />} />
+          <Route path="/payment" Component={<PaystackPayment />} />
           {/* Add a default route or 404 page handling here if needed */}
         </Routes>
         <Footer />
