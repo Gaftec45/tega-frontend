@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000; // Default to 5000 if PORT is not defined
 const PAYSTACK_PUBLIC_KEY = process.env.PAYSTACK_PUBLIC_KEY;
 
 app.use(bodyParser.json());
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'https://tegafatee.onrender.com' }));
 
 app.get('/', (req, res) => {
     res.send('welcome to home page');

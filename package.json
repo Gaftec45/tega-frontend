@@ -20,7 +20,7 @@
     "start": "concurrently \"npm run start:react\" \"npm run start:backend\"",
     "start:react": "react-scripts start",
     "start:backend": "cd server && npm start",
-     "build": "react-scripts build"
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "concurrently": "^8.2.2"
   }
 }
