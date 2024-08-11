@@ -10,6 +10,9 @@ const PAYSTACK_PUBLIC_KEY = process.env.PAYSTACK_PUBLIC_KEY;
 app.use(bodyParser.json());
 app.use(cors({ origin: 'https://tegafatee.onrender.com' }));
 
+app.get('/', (req, res) => {
+    res.send('Welcome to home page')
+})
 
 // API route for Paystack transaction
 app.post('/create-paystack-transaction', (req, res) => {
