@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path'); // Import path module
 const ngrok = require('ngrok');
 
 const app = express();
@@ -11,10 +12,10 @@ const PAYSTACK_PUBLIC_KEY = process.env.PAYSTACK_PUBLIC_KEY;
 app.use(bodyParser.json());
 app.use(cors({ origin: 'https://tegafatee.onrender.com' }));
 
-app.get('/', (req, res) => {
-    res.send('welcome to home page');
-});
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'build')));
 
+// API route for Paystack transaction
 app.post('/create-paystack-transaction', (req, res) => {
   const { email, amount } = req.body;
 
@@ -28,6 +29,11 @@ app.post('/create-paystack-transaction', (req, res) => {
 
   // Send the transaction data to the client
   res.json(transactionData);
+});
+
+// Catch-all handler to return the React app for any other routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // Start the server and ngrok tunnel
